@@ -1,0 +1,45 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+
+{% for image in imagn %}
+<div class="container bg-light">
+<div class="row ">
+
+    <div class="col p-1"><a href="{{ image.1.get_absolute_url }}"><img src="{{ image.1.name.url }}" class="img-fluid rounded" style="width: 100%; height: 100%;" /></a></div>
+
+    <div class="col p-1"><a href="{{ image.2.get_absolute_url }}"><img src="{{ image.2.name.url }}" class="img-fluid rounded" style="width: 100%; height: 100%;" /></a></div>
+    <div class="col p-1"><a href="{{ image.3.get_absolute_url }}"><img src="{{ image.3.name.url }}" class="img-fluid rounded" style="width: 100%; height: 100%;" /></a></div></div>
+
+<div class="row ">
+    <div class="col-8 p-1"><a href="{{ image.4.get_absolute_url }}"><img src="{{ image.4.name.url }}" class="img-fluid rounded" style="width: 100%; height: 100%;" /></a></div>
+
+    <div class="col-4 p-0">
+        <div class="row m-1 "><a href="{{ image.5.get_absolute_url }}"><img src="{{ image.5.name.url }}" class="img-fluid rounded" style="width: 100%; height: 100%;" /></a></div>
+        <div class="row m-1 "><a href="{{ image.6.get_absolute_url }}"><img src="{{ image.6.name.url }}" class="img-fluid rounded" style="width: 100%; height: 100%;" /></a></div>
+    </div>
+</div>
+
+<div class="row ">
+
+    <div class="col-4 p-0">
+        <div class="row m-1 "><a href="{{ image.7.get_absolute_url }}"><img src="{{ image.7.name.url }}" class="img-fluid rounded" style="width: 100%; height: 100%;" /></a></div>
+        <div class="row m-1 "><a href="{{ image.8.get_absolute_url }}"><img src="{{ image.8.name.url }}" class="img-fluid rounded" style="width: 100%; height: 100%;" /></a></div>
+    </div>
+
+    <div class="col-8 p-1"><a href="{{ image.9.get_absolute_url }}"><img src="{{ image.9.name.url }}" class="img-fluid rounded" style="width: 100%; height: 100%;" /></a></div>
+
+
+</div>
+</div>
+{% endfor %}
+
+
+
+{% endblock %}
+
+
+
+<p>В базе нет изображений</p>

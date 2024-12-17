@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel_image</title>
+</head>
+<body>
+    <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <tr>
+    <th><label hidden for="id_author">Author: {{ user.getuser }}</label></th>
+
+    <td> <select hidden name="author" required id="id_author">
+  <option hidden value={{ user.id }} selected></option>
+        <input type="text" class="form-control" aria-label="Comment" aria-describedby="basic-addon2" name="description" value="Описывать здесь, сеньор" maxlength="120" required id="description">
+
+
+
+
+
+</select>
+
+
+    </td>
+  </tr>
+
+  <tr>
+
+    <td>
+
+      <input type="file" name="name" required id="id_name">
+
+
+    </td>
+  </tr>
+
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>

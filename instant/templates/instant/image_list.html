@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="container bg-light">
+{% if image_list %}
+{% for image in image_list reversed%}
+    <div class="container bg-light">
+        {{ image.author }}
+        <img src="{{ image.name.url }}" class="center-block" /></div>
+<div>{{ image.author }}
+    {{ image.id }}
+    {% if image.name == comments.post %}
+    {{ comments }}
+    {% endif %}
+</div>
+{% endfor %}
+
+
+{% else %}
+<p>В базе нет изображений</p>
+{% endif %}
+
+
+{% endblock %}
